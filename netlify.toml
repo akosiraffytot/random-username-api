@@ -1,0 +1,4 @@
+[[redirects]]
+  from = "/api/username"
+  to = "/.netlify/functions/username"
+  status = 200
