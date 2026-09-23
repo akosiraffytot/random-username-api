@@ -1,0 +1,8 @@
+{
+  "name": "random-username-api",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  }
+}

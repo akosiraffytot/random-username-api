@@ -1,6 +1,8 @@
 # AGENTS.md
 
-Random username API. Plain ESM JavaScript, zero dependencies, no `package.json`, no build step. One `GET` returns `{"username":"..."}` in the shape `adjective-noun-1234`.
+Random username API. Plain ESM JavaScript, zero dependencies, no build step. One `GET` returns `{"username":"..."}` in the shape `adjective-noun-1234`.
+
+Root `package.json` is metadata only (`type: module`, node engine) — no deps, no scripts. Vercel will not detect the `api/` folder as Node functions without it; do not add dependencies or build scripts.
 
 ## Architecture
 
