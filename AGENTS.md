@@ -10,7 +10,7 @@ Single shared core, three thin serverless handlers. Change generation logic in `
 
 - `src/username.js` — sole source of logic. Exports `makeUsername(sepName)`.
 - `worker.js` — Cloudflare Workers (`wrangler deploy`)
-- `api/index.js` — Vercel (route `/api`)
+- `api/index.js` — Vercel (route `/api`). Vercel project must use Framework Preset **Other**; the Node.js preset skips `api/` and demands a root server entrypoint.
 - `netlify/functions/username.js` — Netlify function. `netlify.toml` maps `/api/username` → `/.netlify/functions/username` (Netlify's own path is `/.netlify/functions/username`, not `/api/username`).
 
 All three handlers read query param `sep` and forward the raw value to core. Never read `sep` semantics in a handler; resolve in core.
